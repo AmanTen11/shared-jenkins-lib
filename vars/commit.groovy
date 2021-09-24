@@ -6,12 +6,12 @@ def call(){
         }
         stages {   
 
-            //stage ('Git Fetch Stage') {
-            //    steps{
-            //        echo "Git Stage"
-            //        git 'https://github.com/Aman10Siemens/Maven-Jenkins-Pipeline.git'
-            //    }
-            //}
+            stage ('Git Fetch Stage') {
+                steps{
+                    echo "Git Stage"
+                    git branch: 'main', url: 'https://github.com/AmanTen11/Jenkins-Maven-Pipeline.git'
+                }
+            }
 
             stage("Compile") {
                 steps {
